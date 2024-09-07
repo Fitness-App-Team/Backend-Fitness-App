@@ -5,7 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author Sohail
- * Fitness Application For slot Booking
+ * Fitness App For slot Booking
+ *
  */
 @SpringBootApplication
 public class FitnessAppApplication {
