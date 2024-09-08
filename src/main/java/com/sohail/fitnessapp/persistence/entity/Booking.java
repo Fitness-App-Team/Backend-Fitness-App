@@ -4,6 +4,8 @@ import com.sohail.fitnessapp.dto.BookingClassType;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 @Table(name = "slot_booking")
@@ -15,15 +17,15 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //Booked user Data
-    private String userId;
-
     @Column(name = "class_type")
     @Enumerated(EnumType.STRING)
     private BookingClassType type;
 
+    private String userId;
+    private LocalDateTime bookingTime;
+    private boolean isWaitingList;
 
-    //Slot Details
-    private int totalSlots;
-    private int emptySlots;
+    @ManyToOne
+    @JoinColumn(name = "fitness_id")
+    private Fitness fitnessId;
 }
