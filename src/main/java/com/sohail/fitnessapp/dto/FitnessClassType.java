@@ -1,6 +1,6 @@
 package com.sohail.fitnessapp.dto;
 
-public enum BookingClassType {
+public enum FitnessClassType {
     YOGA,
     GYM,
     DANCE

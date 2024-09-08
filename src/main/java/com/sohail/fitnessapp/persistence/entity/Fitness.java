@@ -1,5 +1,6 @@
 package com.sohail.fitnessapp.persistence.entity;
 
+import com.sohail.fitnessapp.dto.FitnessClassType;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -12,7 +13,7 @@ public class Fitness {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String type; // yoga, gym, dance
+    private FitnessClassType type; // yoga, gym, dance
     private int capacity;
 
     @OneToMany(mappedBy = "fitness")

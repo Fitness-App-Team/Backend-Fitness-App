@@ -1,6 +1,6 @@
 package com.sohail.fitnessapp.persistence.entity;
 
-import com.sohail.fitnessapp.dto.BookingClassType;
+import com.sohail.fitnessapp.dto.FitnessClassType;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -19,7 +19,7 @@ public class Booking {
 
     @Column(name = "class_type")
     @Enumerated(EnumType.STRING)
-    private BookingClassType type;
+    private FitnessClassType type;
 
     private String userId;
     private LocalDateTime bookingTime;
